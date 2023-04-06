@@ -1,43 +1,42 @@
 package kr.co.softsoldesk.beans;
 
-import javax.annotation.Resource;
-
-import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.beans.factory.annotation.Qualifier;
-import org.springframework.stereotype.Component;
-
-@Component
 public class TestBean1 {
 	
-	@Autowired // getter만 필요
-	private DataBean1 data1; 
-	
-	@Autowired
-	@Qualifier("obj2")
-	private DataBean2 data2; 
-	
-	@Resource(name = "obj3")
-	private DataBean3 data3; 
-	@Resource(name = "obj4")
-	private DataBean3 data4; 
-	@Resource(name = "obj5")
-	private DataBean3 data5;
-	
-	public DataBean1 getData1() {
-		return data1;
+	public void method1() {
+		
+		System.out.println("beans.TestBean1.method1()");
+		
 	}
-	public DataBean2 getData2() {
-		return data2;
+	public void method1(int a1) {
+		
+		System.out.println("beans.TestBean1.method1(int)");
+		
 	}
-	public DataBean3 getData3() {
-		return data3;
+	public void method1(String a2) {
+		
+		System.out.println("beans.TestBean1.method1(java.lang.String)");
+		
 	}
-	public DataBean3 getData4() {
-		return data4;
+	public void method1(int a1, int a2) {
+		
+		System.out.println("beans.TestBean1.method1(int, int)");
+		
 	}
-	public DataBean3 getData5() {
-		return data5;
-	} 
-	
+	public void method1(int a1, String a2) {
+		
+		System.out.println("beans.TestBean1.method1(int, String)");
+		
+	}
+	//=========================================================================
+	public void method2() {
+		
+		System.out.println("beans.TestBean1.method2()");
+		
+	}
+	public void method3() {
+		
+		System.out.println("beans.TestBean1.method3()");
+		
+	}
 	
 }
